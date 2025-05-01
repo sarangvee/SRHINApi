@@ -37,6 +37,8 @@ namespace SRHINApi.StepDefinitions
             responseBody = await response.Content.ReadAsStringAsync();
             _output.WriteLine($"SRHIN API response: {responseBody}");
 
+            //Test comment 01
+
             if (_scenarioContext.ScenarioInfo.Tags.Contains("tag1"))
             {
                 var Jsonrsponse = JsonConvert.DeserializeObject<Datamodel.Class1[]>(responseBody);
